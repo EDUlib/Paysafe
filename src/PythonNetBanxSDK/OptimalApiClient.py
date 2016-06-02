@@ -99,6 +99,9 @@ class OptimalApiClient(object):
     '''
     def to_dictionary(self, obj):
         obj_dict = dict()
+        if(type(obj) is str):
+            return obj
+        # Missing dictionary processing (e.g.: callback)
         for key in obj.__dict__.keys():
             try:
                 if(type(obj.__dict__[key]) is list):
