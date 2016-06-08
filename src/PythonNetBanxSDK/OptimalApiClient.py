@@ -98,9 +98,6 @@ class OptimalApiClient(object):
     @return: Dictionary Object
     '''
     def to_dictionary(self, obj):
-        if type(obj) is str or type(obj) is unicode:
-            return obj
-        # Missing dictionary processing (e.g.: callback)
         obj_dict = dict()
         for key in obj.__dict__.keys():
             try:
