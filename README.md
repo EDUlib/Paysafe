@@ -1,5 +1,5 @@
 # Python_SDK
-Optimal Payments Python SDK
+Optimal Payments Python SDK for for Python 2
 
 #Installation procedure for Python 2
 This library relies on urllib3, since this library is also compatible with Python 2, simply install it using the Python 2 executable
