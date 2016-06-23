@@ -98,7 +98,15 @@ class OptimalApiClient(object):
     @return: Dictionary Object
     '''
     def to_dictionary(self, obj):
+        # Modified by EDUlib
+        if type(obj) is str or type(obj) is unicode:
+           #print("Code Nobry 3")
+           #print obj
+           return obj
+        # Missing dictionary processing (e.g.: callback)
+        print("Code Nobry 2")
         obj_dict = dict()
+        # Modified by EDUlib
         for key in obj.__dict__.keys():
             try:
                 if(type(obj.__dict__[key]) is list):
@@ -196,7 +204,10 @@ class OptimalApiClient(object):
                 return (self.deserialize(response.data,
                                          encoding=self._RESPONSE_ENCODING))
         # HTTPError from urllib.error
-        except urllib.error.HTTPError as e:
+        # Modified by EDUlib
+        #except urllib.error.HTTPError as e:
+        except urllib2.HTTPError as e:
+        # Modified by EDUlib
             return self.prepare_error("400", e.code + "-[Details: " + \
                                       e.reason + "]")
         # HTTPError from urllib3.exceptions
