@@ -4,12 +4,8 @@ Created on 30-Jan-2015
 @author: Asawari.Vaidya
 '''
 import inspect
+from PythonNetBanxSDK import CardPayments, common
 
-# EDUlib Python 2
-#####from PythonNetBanxSDK import CardPayments, common
-
-# EDUlib Python 3
-from ecommerce.Paysafe.src.PythonNetBanxSDK import CardPayments, common
 
 class CardPaymentsService(object):
     '''

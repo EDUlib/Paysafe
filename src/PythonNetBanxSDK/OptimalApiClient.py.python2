@@ -4,29 +4,18 @@ Created on 30-Jan-2015
 @author: Asawari.Vaidya
 '''
 import json
-#####import urllib2, urllib
+import urllib2, urllib
 import urllib3.util
 import urllib3.exceptions
-
-# EDUlib Python 2
-#####from bin.Environment import Environment
-
-# EDUlib Python 3
-from ecommerce.Paysafe.src.bin.Environment import Environment
-
-# EDUlib Python 2
-#####from PythonNetBanxSDK.CustomerVault.CustomerVaultService import CustomerVaultService
-#####from PythonNetBanxSDK.CardPayments.CardPaymentsService import CardPaymentsService
-#####from PythonNetBanxSDK.HostedPayment.HostedPaymentService import HostedPaymentService
-#####from PythonNetBanxSDK.common.DomainObject import DomainObject
-#####from PythonNetBanxSDK.common.Error import Error
-
-# EDUlib Python 3
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CustomerVault.CustomerVaultService import CustomerVaultService
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CardPayments.CardPaymentsService import CardPaymentsService
-from ecommerce.Paysafe.src.PythonNetBanxSDK.HostedPayment.HostedPaymentService import HostedPaymentService
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.DomainObject import DomainObject
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.Error import Error
+from bin.Environment import Environment
+from PythonNetBanxSDK.CustomerVault.CustomerVaultService import \
+                                    CustomerVaultService
+from PythonNetBanxSDK.CardPayments.CardPaymentsService import \
+                                    CardPaymentsService
+from PythonNetBanxSDK.HostedPayment.HostedPaymentService import \
+                                    HostedPaymentService
+from PythonNetBanxSDK.common.DomainObject import DomainObject
+from PythonNetBanxSDK.common.Error import Error
 
 
 # Global variables to create class objects

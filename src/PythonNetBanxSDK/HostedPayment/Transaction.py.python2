@@ -3,16 +3,10 @@ Created on 19-Feb-2015
 
 @author: Asawari.Vaidya
 '''
+from PythonNetBanxSDK import HostedPayment
+from PythonNetBanxSDK.HostedPayment.Card import Card
+from PythonNetBanxSDK.common.DomainObject import DomainObject
 
-# EDUlib Python 2
-#####from PythonNetBanxSDK import HostedPayment
-#####from PythonNetBanxSDK.HostedPayment.Card import Card
-#####from PythonNetBanxSDK.common.DomainObject import DomainObject
-
-# EDUlib Python 3
-from ecommerce.Paysafe.src.PythonNetBanxSDK import HostedPayment
-from ecommerce.Paysafe.src.PythonNetBanxSDK.HostedPayment.Card import Card
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.DomainObject import DomainObject
 
 class Transaction(DomainObject):
     '''

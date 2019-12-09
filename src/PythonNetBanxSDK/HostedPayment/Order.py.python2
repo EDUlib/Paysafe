@@ -3,36 +3,21 @@ Created on 04-Feb-2015
 
 @author: Asawari.Vaidya
 '''
+from PythonNetBanxSDK.HostedPayment.ShoppingCart import ShoppingCart
+from PythonNetBanxSDK.HostedPayment.AncillaryFee import AncillaryFee
+from PythonNetBanxSDK.CardPayments.BillingDetails import BillingDetails
+from PythonNetBanxSDK.CardPayments.ShippingDetails import ShippingDetails
+from PythonNetBanxSDK.HostedPayment.Redirect import Redirect
+from PythonNetBanxSDK.HostedPayment.ExtendedOptions import ExtendedOptions
+from PythonNetBanxSDK.HostedPayment.AddendumData import AddendumData
+from PythonNetBanxSDK.HostedPayment.AssociatedTransactions import \
+                                    AssociatedTransactions
+from PythonNetBanxSDK import CustomerVault
+from PythonNetBanxSDK import common
+from PythonNetBanxSDK.HostedPayment.Transaction import Transaction
+from PythonNetBanxSDK.common.DomainObject import DomainObject
+from PythonNetBanxSDK.common.Link import Link
 
-# EDUlib Python 2
-####from PythonNetBanxSDK.HostedPayment.ShoppingCart import ShoppingCart
-####from PythonNetBanxSDK.HostedPayment.AncillaryFee import AncillaryFee
-####from PythonNetBanxSDK.CardPayments.BillingDetails import BillingDetails
-####from PythonNetBanxSDK.CardPayments.ShippingDetails import ShippingDetails
-####from PythonNetBanxSDK.HostedPayment.Redirect import Redirect
-####from PythonNetBanxSDK.HostedPayment.ExtendedOptions import ExtendedOptions
-####from PythonNetBanxSDK.HostedPayment.AddendumData import AddendumData
-####from PythonNetBanxSDK.HostedPayment.AssociatedTransactions import AssociatedTransactions
-####from PythonNetBanxSDK import CustomerVault
-####from PythonNetBanxSDK import common
-####from PythonNetBanxSDK.HostedPayment.Transaction import Transaction
-####from PythonNetBanxSDK.common.DomainObject import DomainObject
-####from PythonNetBanxSDK.common.Link import Link
-
-# EDUlib Python 3
-from ecommerce.Paysafe.src.PythonNetBanxSDK.HostedPayment.ShoppingCart import ShoppingCart
-from ecommerce.Paysafe.src.PythonNetBanxSDK.HostedPayment.AncillaryFee import AncillaryFee
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CardPayments.BillingDetails import BillingDetails
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CardPayments.ShippingDetails import ShippingDetails
-from ecommerce.Paysafe.src.PythonNetBanxSDK.HostedPayment.Redirect import Redirect
-from ecommerce.Paysafe.src.PythonNetBanxSDK.HostedPayment.ExtendedOptions import ExtendedOptions
-from ecommerce.Paysafe.src.PythonNetBanxSDK.HostedPayment.AddendumData import AddendumData
-from ecommerce.Paysafe.src.PythonNetBanxSDK.HostedPayment.AssociatedTransactions import AssociatedTransactions
-from ecommerce.Paysafe.src.PythonNetBanxSDK import CustomerVault
-from ecommerce.Paysafe.src.PythonNetBanxSDK import common
-from ecommerce.Paysafe.src.PythonNetBanxSDK.HostedPayment.Transaction import Transaction
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.DomainObject import DomainObject
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.Link import Link
 
 class Order(DomainObject):
     '''

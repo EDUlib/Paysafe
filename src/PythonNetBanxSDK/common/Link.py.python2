@@ -3,14 +3,10 @@ Created on 05-Feb-2015
 
 @author: Asawari.Vaidya
 '''
+from PythonNetBanxSDK.common.DomainObject import DomainObject
 
-# EDUlib Python 2
-#####from PythonNetBanxSDK.common.DomainObject import DomainObject
 
-# EDUlib Python 3
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.DomainObject import DomainObject
-
-class Redirect(DomainObject):
+class Link(DomainObject):
     '''
     classdocs
     '''
@@ -23,7 +19,8 @@ class Redirect(DomainObject):
         handler['rel'] = self.rel
         handler['returnKeys'] = self.returnKeys
         handler['uri'] = self.uri
-        handler['delimiter'] = self.delimiter
+        handler['keys'] = self.keys
+        handler['href'] = self.href
         
         if obj is not None:
             self.setProperties(obj, handler=handler)
@@ -47,9 +44,15 @@ class Redirect(DomainObject):
     '''   
     def uri(self, uri):
         self.__dict__['uri'] = uri
-        
+
     '''
-    Property Delimiter
+    Property Key
     '''   
-    def delimiter(self, delimiter):
-        self.__dict__['delimiter'] = delimiter
+    def keys(self, keys):
+        self.__dict__['keys'] = keys
+
+    '''
+    Property Href
+    '''   
+    def href(self, href):
+        self.__dict__['href'] = href

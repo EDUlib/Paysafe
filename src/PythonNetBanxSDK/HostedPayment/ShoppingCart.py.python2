@@ -3,14 +3,10 @@ Created on 05-Feb-2015
 
 @author: Asawari.Vaidya
 '''
+from PythonNetBanxSDK.common.DomainObject import DomainObject
 
-# EDUlib Python 2
-#####from PythonNetBanxSDK.common.DomainObject import DomainObject
 
-# EDUlib Python 3
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.DomainObject import DomainObject
-
-class AncillaryFee(DomainObject):
+class ShoppingCart(DomainObject):
     '''
     classdocs
     '''
@@ -22,10 +18,13 @@ class AncillaryFee(DomainObject):
         handler = dict()
         handler['amount'] = self.amount
         handler['description'] = self.description
+        handler['sku'] = self.sku
+        handler['quantity'] = self.quantity
         
         if obj is not None:
             self.setProperties(obj, handler=handler)
         else:
+
             pass
         
     '''
@@ -33,9 +32,22 @@ class AncillaryFee(DomainObject):
     '''   
     def amount(self, amount):
         self.__dict__['amount'] = amount
+    
+    '''
+    Property Description
+    '''   
+    def description(self, description):
+        self.__dict__['description'] = description
         
     '''
-    Property Descriptor
+    Property Sku
     '''   
-    def descriptor(self, descriptor):
-        self.__dict__['descriptor'] = descriptor
+    def sku(self, sku):
+        self.__dict__['sku'] = sku
+        
+    '''
+    Property Quantity
+    '''   
+    def quantity(self, quantity):
+        self.__dict__['quantity'] = quantity
+    

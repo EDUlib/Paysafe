@@ -4,14 +4,8 @@ Created on 30-Jan-2015
 @author: Asawari.Vaidya
 '''
 import inspect
-
-# EDUlib Python 2
-#####from PythonNetBanxSDK import CustomerVault
-#####from PythonNetBanxSDK import common
-
-# EDUlib Python 3
-from ecommerce.Paysafe.src.PythonNetBanxSDK import CustomerVault
-from ecommerce.Paysafe.src.PythonNetBanxSDK import common
+from PythonNetBanxSDK import CustomerVault
+from PythonNetBanxSDK import common
 
 
 class CustomerVaultService(object):

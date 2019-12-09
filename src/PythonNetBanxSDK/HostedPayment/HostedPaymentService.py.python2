@@ -3,14 +3,9 @@ Created on 30-Jan-2015
 
 @author: Asawari.Vaidya
 '''
+from PythonNetBanxSDK import HostedPayment
+from PythonNetBanxSDK import common
 
-# EDUlib Python 2
-#####from PythonNetBanxSDK import HostedPayment
-#####from PythonNetBanxSDK import common
-
-# EDUlib Python 3
-from ecommerce.Paysafe.src.PythonNetBanxSDK import HostedPayment
-from ecommerce.Paysafe.src.PythonNetBanxSDK import common
 
 class HostedPaymentService(object):
     '''
