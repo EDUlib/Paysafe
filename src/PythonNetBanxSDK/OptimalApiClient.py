@@ -110,7 +110,8 @@ class OptimalApiClient(object):
     '''
     def to_dictionary(self, obj):
         # Modified by EDUlib
-        if type(obj) is str or type(obj) is unicode:
+        #####if type(obj) is str or type(obj) is unicode:
+        if type(obj) is str:
            #print("Code Nobry 3")
            #print obj
            return obj
@@ -217,7 +218,8 @@ class OptimalApiClient(object):
         # HTTPError from urllib.error
         # Modified by EDUlib
         #except urllib.error.HTTPError as e:
-        except urllib2.HTTPError as e:
+        #####except urllib2.HTTPError as e:
+        except urllib3.HTTPError as e:
         # Modified by EDUlib
             return self.prepare_error("400", e.code + "-[Details: " + \
                                       e.reason + "]")
