@@ -3,14 +3,9 @@ Created on 25-Feb-2015
 
 @author: Asawari.Vaidya
 '''
+from PythonNetBanxSDK import common, HostedPayment
+from PythonNetBanxSDK.common.DomainObject import DomainObject
 
-# EDUlib Python 2
-#####from PythonNetBanxSDK import common, HostedPayment
-#####from PythonNetBanxSDK.common.DomainObject import DomainObject
-
-# EDUlib Python 3
-from ecommerce.Paysafe.src.PythonNetBanxSDK import common, HostedPayment
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.DomainObject import DomainObject
 
 class Settlement(DomainObject):
     '''

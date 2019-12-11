@@ -3,10 +3,16 @@ Created on 17-Feb-2015
 
 @author: Asawari.Vaidya
 '''
-from PythonNetBanxSDK import common
-from PythonNetBanxSDK import CardPayments
-from PythonNetBanxSDK.common.DomainObject import DomainObject
 
+# EDUlib Python 2
+#####from PythonNetBanxSDK import common
+#####from PythonNetBanxSDK import CardPayments
+#####from PythonNetBanxSDK.common.DomainObject import DomainObject
+
+# EDUlib Python 2
+from ecommerce.Paysafe.src.PythonNetBanxSDK import common
+from ecommerce.Paysafe.src.PythonNetBanxSDK import CardPayments
+from ecommerce.Paysafe.src.PythonNetBanxSDK.common.DomainObject import DomainObject
 
 class AuthorizationReversal(DomainObject):
     '''

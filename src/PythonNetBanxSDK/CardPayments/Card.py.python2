@@ -3,20 +3,12 @@ Created on 05-Feb-2015
 
 @author: Asawari.Vaidya
 '''
+from PythonNetBanxSDK.CardPayments.CardExpiry import CardExpiry
+from PythonNetBanxSDK import common
+from PythonNetBanxSDK import CustomerVault
+from PythonNetBanxSDK.common.Link import Link
+from PythonNetBanxSDK.common.DomainObject import DomainObject
 
-# EDUlib Python 2
-#####from PythonNetBanxSDK.CardPayments.CardExpiry import CardExpiry
-#####from PythonNetBanxSDK import common
-#####from PythonNetBanxSDK import CustomerVault
-#####from PythonNetBanxSDK.common.Link import Link
-#####from PythonNetBanxSDK.common.DomainObject import DomainObject
-
-# EDUlib Python 3
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CardPayments.CardExpiry import CardExpiry
-from ecommerce.Paysafe.src.PythonNetBanxSDK import common
-from ecommerce.Paysafe.src.PythonNetBanxSDK import CustomerVault
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.Link import Link
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.DomainObject import DomainObject
 
 class Card(DomainObject):
     '''

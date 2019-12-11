@@ -3,34 +3,18 @@ Created on 10-Jun-2015
 
 @author: Asawari.Vaidya
 '''
-
-# EDUlib Python 3
-#####from PythonNetBanxSDK.common.Error import Error
-#####from PythonNetBanxSDK.CardPayments.Card import Card
-#####from PythonNetBanxSDK.CustomerVault.Profile import Profile
-#####from PythonNetBanxSDK.CardPayments.BillingDetails import BillingDetails
-#####from PythonNetBanxSDK.CardPayments.Authentication import Authentication
-#####from PythonNetBanxSDK.CardPayments.AccordD import AccordD
-#####from PythonNetBanxSDK.CardPayments.ShippingDetails import ShippingDetails
-#####from PythonNetBanxSDK.CardPayments.MerchantDescriptor import MerchantDescriptor
-#####from PythonNetBanxSDK.CardPayments.MasterPass import MasterPass
-#####from PythonNetBanxSDK.CardPayments.AcquirerResponse import AcquirerResponse
-#####from PythonNetBanxSDK.common.Link import Link
-#####from PythonNetBanxSDK.common.DomainObject import DomainObject
-
-# EDUlib Python 3
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.Error import Error
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CardPayments.Card import Card
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CustomerVault.Profile import Profile
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CardPayments.BillingDetails import BillingDetails
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CardPayments.Authentication import Authentication
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CardPayments.AccordD import AccordD
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CardPayments.ShippingDetails import ShippingDetails
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CardPayments.MerchantDescriptor import MerchantDescriptor
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CardPayments.MasterPass import MasterPass
-from ecommerce.Paysafe.src.PythonNetBanxSDK.CardPayments.AcquirerResponse import AcquirerResponse
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.Link import Link
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.DomainObject import DomainObject
+from PythonNetBanxSDK.common.Error import Error
+from PythonNetBanxSDK.CardPayments.Card import Card
+from PythonNetBanxSDK.CustomerVault.Profile import Profile
+from PythonNetBanxSDK.CardPayments.BillingDetails import BillingDetails
+from PythonNetBanxSDK.CardPayments.Authentication import Authentication
+from PythonNetBanxSDK.CardPayments.AccordD import AccordD
+from PythonNetBanxSDK.CardPayments.ShippingDetails import ShippingDetails
+from PythonNetBanxSDK.CardPayments.MerchantDescriptor import MerchantDescriptor
+from PythonNetBanxSDK.CardPayments.MasterPass import MasterPass
+from PythonNetBanxSDK.CardPayments.AcquirerResponse import AcquirerResponse
+from PythonNetBanxSDK.common.Link import Link
+from PythonNetBanxSDK.common.DomainObject import DomainObject
 
 class Verification(DomainObject):
     '''

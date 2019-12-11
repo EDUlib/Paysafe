@@ -3,20 +3,13 @@ Created on 05-Feb-2015
 
 @author: Asawari.Vaidya
 '''
+from PythonNetBanxSDK import CardPayments
+from PythonNetBanxSDK.common.Link import Link
+from PythonNetBanxSDK.common.Error import Error
+from PythonNetBanxSDK.common.DomainObject import DomainObject
 
-# EDUlib Python 2
-#####from PythonNetBanxSDK import CardPayments
-#####from PythonNetBanxSDK.common.DomainObject import DomainObject
-#####from PythonNetBanxSDK import common
-#####from PythonNetBanxSDK.common.Error import Error
 
-# EDUlib Python 3
-from ecommerce.Paysafe.src.PythonNetBanxSDK import CardPayments
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.DomainObject import DomainObject
-from ecommerce.Paysafe.src.PythonNetBanxSDK import common
-from ecommerce.Paysafe.src.PythonNetBanxSDK.common.Error import Error
-
-class Refund(DomainObject):
+class Settlement(DomainObject):
     '''
     classdocs
     '''
@@ -29,8 +22,8 @@ class Refund(DomainObject):
         handler = dict()
         handler['error'] = self.error
         handler['acquirerResponse'] = self.acquirerResponse
-        handler['settlements'] = self.settlements
         handler['links'] = self.links
+        handler['authorization'] = self.authorization
         
         if obj is not None:
             self.setProperties(obj, handler=handler)
@@ -54,18 +47,18 @@ class Refund(DomainObject):
     '''
     def amount(self, amount):
         self.__dict__['amount'] = amount
-
+        
     '''
-    Property Account Number
+    Property Available To Refund
     '''
-    def accountNum(self, account_num):
-        self.__dict__['accountNum'] = account_num
-
+    def availableToRefund(self, available_to_refund):
+        self.__dict__['availableToRefund'] = available_to_refund
+        
     '''
-    Property Dup Check
+    Property Child Account Number
     '''
-    def dupCheck(self, dup_check):
-        self.__dict__['dupCheck'] = dup_check
+    def childAccountNum(self, child_account_no):
+        self.__dict__['childAccountNum'] = child_account_no
 
     '''
     Property Txn Time
@@ -80,6 +73,12 @@ class Refund(DomainObject):
     def error(self, error):
         e = Error(error)
         self.__dict__['error'] = e
+
+    '''
+    Property Dup Check
+    '''
+    def dupCheck(self, dup_check):
+        self.__dict__['dupCheck'] = dup_check
 
     '''
     Property Status
@@ -107,24 +106,20 @@ class Refund(DomainObject):
             self.__dict__['acquirerResponse'] = ar
     
     '''
-    Property Settlements
-    @param: Settlement Object
-    '''
-    def settlements(self, settlements):
-        if isinstance(settlements, CardPayments.Settlement.Settlement):
-            self.__dict__['settlements'] = settlements
-        else:
-            a = CardPayments.Settlement.Settlement(settlements)
-            self.__dict__['settlements'] = a
-    
-    '''
     Property Link
-    @param: Link Object, List of Link Objects
+    @parma: Link Object, List of Link Objects
     '''
     def links(self, links):
-        if isinstance(links, common.Link.Link):
+        if isinstance(links, Link):
             self.__dict__['links'] = links
         else:
             for count in range(0, links.__len__()):
-                l = common.Link.Link(links[count])
+                l = Link(links[count])
                 self.__dict__.setdefault('links', []).append(l)
+    
+    def authorization(self, authorization):
+        if isinstance(authorization, CardPayments.Authorization.Authorization):
+            self.__dict__['authorization'] = authorization
+        else:
+            a = CardPayments.Authorization.Authorization(authorization)
+            self.__dict__['authorization'] = a
